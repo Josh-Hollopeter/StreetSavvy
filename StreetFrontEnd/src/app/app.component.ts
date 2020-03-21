@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'StreetFrontEnd';
+
+  checkLogin(){
+    if (localStorage.getItem('credentials')){
+      return true;
+    }
+    return false;
+
+  }
+
 }

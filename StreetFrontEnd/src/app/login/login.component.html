@@ -1,1 +1,29 @@
-<p>login works!</p>
+<!-- <input type="text" name = "username" [(ngModel)] ="newUser.username">
+<input type="text" name = "password" [(ngModel)] ="newUser.password">
+<input type ="submit" (click)="login()" name="submit"> -->
+<div class="container">
+  <div class = "border">
+  <div class="logo">Street Savvy</div>
+  <div class="login-item">
+    <form action="" method="post" class="form form-login">
+      <div class="form-field">
+        <label class="user" for="login-username"><span class="hidden">Username</span></label>
+        <input id="login-username" type="text" class="form-input" placeholder="Username" name = "username"
+         [(ngModel)] ="newUser.username" required>
+      </div>
+
+      <div class="form-field">
+        <label class="lock" for="login-password"><span class="hidden">Password</span></label>
+        <input id="login-password" type="password" class="form-input" placeholder="Password" name = "password"
+        [(ngModel)] ="newUser.password" required>
+      </div>
+
+      <div class="form-field">
+        <input type="submit" value="Log in" (click)="login()" name="submit">
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+<script src="https://use.typekit.net/rjb4unc.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
