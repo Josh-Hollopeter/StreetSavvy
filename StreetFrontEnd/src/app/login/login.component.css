@@ -1,6 +1,6 @@
 @import url('https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css');
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
 html {
    height: 100%;
 }
@@ -20,7 +20,7 @@ background: linear-gradient(to top, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Fi
 }
 
 .container {
-	background:rgba(216, 220, 224, 0.5);
+  background-image: url(https://image.freepik.com/free-vector/stock-market_46706-576.jpg);
   border-radius: 5px;
   box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
   /* display: flex; */
@@ -33,15 +33,25 @@ background: linear-gradient(to top, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Fi
   align-items: center;
   /* display: flex;
   flex-direction: column; */
+  background-repeat: round;
 
 }
 
 .logo{
-  font-family: "museo-slab";
-  font-size:20px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size:35px;
   text-align: center;
   padding: 20px 20px 0;
   margin:0;
+  /* color: whitesmoke; */
+
+  color: #F975F7;
+  -webkit-text-stroke :1px #f008b7;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+  filter:drop-shadow(2px 2px 20px #f008b7) ;
+   z-index: 20;
+
+
 }
 
 .login-item {
@@ -68,11 +78,11 @@ input {
 	color: #5b5b5b;
 }
 
-.lock:before {
+/* .lock:before {
   content: '\f023';
   font: 14px fontawesome;
 	color: #5b5b5b;
-}
+} */
 
 .form input[type="password"], .form input[type="text"], .form input[type="submit"] {
   width: 100%;
@@ -136,5 +146,5 @@ input {
   text-align: center;
 }
 .border{
-  background-color: rgb(25, 63, 105);
+  background-color: rgb(25, 63, 105,0.4);
 }
