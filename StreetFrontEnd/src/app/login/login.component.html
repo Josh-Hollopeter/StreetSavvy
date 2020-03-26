@@ -1,7 +1,5 @@
-<!-- <input type="text" name = "username" [(ngModel)] ="newUser.username">
-<input type="text" name = "password" [(ngModel)] ="newUser.password">
-<input type ="submit" (click)="login()" name="submit"> -->
-<div class="container">
+
+<div class="container" *ngIf="!checkLogin()">
   <div class = "border">
   <div class="logo">Street Savvy</div>
   <div class="login-item">
@@ -22,8 +20,10 @@
         <input type="submit" value="Log in" (click)="login()" name="submit">
       </div>
     </form>
+    </div>
   </div>
 </div>
-</div>
+
+
 <script src="https://use.typekit.net/rjb4unc.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>

@@ -78,11 +78,11 @@ input {
 	color: #5b5b5b;
 }
 
-/* .lock:before {
+.lock:before {
   content: '\f023';
   font: 14px fontawesome;
 	color: #5b5b5b;
-} */
+}
 
 .form input[type="password"], .form input[type="text"], .form input[type="submit"] {
   width: 100%;

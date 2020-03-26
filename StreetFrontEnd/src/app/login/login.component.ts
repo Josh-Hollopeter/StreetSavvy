@@ -30,5 +30,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  checkLogin(){
+    if (localStorage.getItem('credentials')){
+      return true;
+    }
+    return false;
+
+  }
 
 }

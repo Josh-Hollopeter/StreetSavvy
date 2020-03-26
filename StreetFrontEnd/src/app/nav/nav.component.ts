@@ -20,4 +20,11 @@ export class NavComponent implements OnInit {
     this.router.navigateByUrl("login")
 
   }
+  checkLogin(){
+    if (localStorage.getItem('credentials')){
+      return true;
+    }
+    return false;
+
+  }
 }

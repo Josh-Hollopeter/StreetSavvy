@@ -2,7 +2,8 @@
   <h1 class="logo"><a href="allstock">StreetSavvy</a></h1>
     <ul class="main-nav">
         <li><a href="allstock">Home</a></li>
-        <li><a href="#" (click)="logout()"> Logout</a></li>
+        <li *ngIf="checkLogin()"><a href="#" (click)="logout()"> Logout</a></li>
+        <li *ngIf="!checkLogin()"><a  [routerLink]="['/register']"   > Sign-Up</a></li>
         <!-- <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contact</a></li> -->
     </ul>

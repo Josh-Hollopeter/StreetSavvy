@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import {  Pipe, PipeTransform ,Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
@@ -20,7 +21,7 @@ export class AllstockComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router:Router) {
 
     this.http.get<any>(this.url).subscribe(data => {
       this.financialStatement = data.symbolsList.slice(0,500);
@@ -32,6 +33,9 @@ export class AllstockComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(!localStorage.getItem('credentials')){
+      this.router.navigateByUrl('/login');
+      }
     setTimeout(() => {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
